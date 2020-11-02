@@ -1,13 +1,23 @@
 body
-    background-color: darkolivegreen
+    background-color: #424242
     color: #fff
-section
-    padding-top: 50px
 section.top
     padding-top: 0!important
 a
     color: #fff
     text-decoration: none
+
+
+.effect-fade
+    opacity: 0
+    transform: translate(0, 45px)
+    transition: all 2000ms
+
+
+.effect-fade.effect-scroll
+    opacity: 1
+    transform: translate(0, 0)
+
 h2
     position: relative
     color: #FFFFFF45
@@ -38,9 +48,18 @@ h2.left
         position: absolute
         height: 100vh
         width: 100%
+        @media screen and ( max-width: 750px )
+                height: 70vh
+#slide
+    height: 300px
+    margin: 0 auto
+    position: relative
+
 .top-wrapper
     height: 100vh
     z-index: 1
+    @media screen and ( max-width: 750px )
+        height: 70vh
     .top-logo
         position: absolute
         top: 35%
@@ -52,6 +71,8 @@ h2.left
         padding: 20px 40px
         text-align: center
         h1.top-logo-title
+            font-size: 4rem
+            font-family: cursive
             img
                 width: 280px
         .top-logo-text
@@ -69,6 +90,7 @@ h2.left
         align-items: center
         justify-content: center
         @media screen and ( max-width: 750px )
+            bottom: 40%
             font-size: 1.2rem
         &:after
             border-top: 1px solid
@@ -151,7 +173,7 @@ header
                     letter-spacing: 4px
                     font-weight: normal
         .about-text-wrap
-            margin-top: 30px
+            margin: 30px 0 120px 0
             h4
                 font-weight: normal
                 font-size: 22px
@@ -178,7 +200,7 @@ header
                 margin: 1%
                 padding: 35px
                 width: 31%
-                background: darkslategray
+                background: #828282
                 opacity: 0.8
                 border-radius: 15%
                 @media screen and ( max-width: 750px )
@@ -191,6 +213,41 @@ header
                     margin: 20px 0
                 .service-item-text
                     font-size: 14px
+.skills
+    position: relative
+    width: 100%
+    margin-bottom: 100px
+    text-align: center
+    background-color: #ccc
+    color: #333
+    h4
+        font-size: 1.5rem
+        padding: 30px 0
+    @media screen and ( max-width: 750px )
+        font-size: 1.2rem
+    .skills-wrap
+        display: flex
+        flex-wrap: wrap
+        max-width: 1000px
+        margin: 0 auto
+        justify-content: space-between
+        .skill-item
+            width: calc(25% - 20px)
+            justify-content: center
+            margin-bottom: 30px
+            .skill-name
+                margin: 0
+                font-size: 1.25rem
+                @media screen and ( max-width: 750px )
+                    font-size: 0.5rem
+.banner-title-skill
+    padding: 20px 0
+    color: #333
+.fa-2x::before
+    font-size: 2em
+    @media screen and ( max-width: 750px )
+        font-size: 1em
+
 .contact
     .inner
         text-align: center

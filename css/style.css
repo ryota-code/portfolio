@@ -1,10 +1,6 @@
 body {
-  background-color: darkolivegreen;
+  background-color: #424242;
   color: #fff;
-}
-
-section {
-  padding-top: 50px;
 }
 
 section.top {
@@ -14,6 +10,20 @@ section.top {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.effect-fade {
+  opacity: 0;
+  -webkit-transform: translate(0, 45px);
+          transform: translate(0, 45px);
+  -webkit-transition: all 2000ms;
+  transition: all 2000ms;
+}
+
+.effect-fade.effect-scroll {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 h2 {
@@ -64,9 +74,27 @@ h2.left span {
   width: 100%;
 }
 
+@media screen and (max-width: 750px) {
+  .fade-img img {
+    height: 70vh;
+  }
+}
+
+#slide {
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .top-wrapper {
   height: 100vh;
   z-index: 1;
+}
+
+@media screen and (max-width: 750px) {
+  .top-wrapper {
+    height: 70vh;
+  }
 }
 
 .top-wrapper .top-logo {
@@ -76,9 +104,16 @@ h2.left span {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 20px 40px;
   text-align: center;
+}
+
+.top-wrapper .top-logo h1.top-logo-title {
+  font-size: 4rem;
+  font-family: cursive;
 }
 
 .top-wrapper .top-logo h1.top-logo-title img {
@@ -98,13 +133,20 @@ h2.left span {
   color: #fff;
   font-family: Hiragino Mincho ProN;
   font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 750px) {
   .top-wrapper .top-text {
+    bottom: 40%;
     font-size: 1.2rem;
   }
 }
@@ -122,18 +164,25 @@ h2.left span {
 }
 
 header .pc-header nav.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 15px;
 }
 
 header .pc-header nav.header .header-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 header .pc-header nav.header .header-list li {
   padding: 30px 20px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -150,8 +199,11 @@ header .sp-header {
 }
 
 .work .work-wrapper .work-contents .work-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (max-width: 750px) {
@@ -204,6 +256,8 @@ header .sp-header {
 }
 
 .about .about-text .about-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -218,6 +272,8 @@ header .sp-header {
 }
 
 .about .about-text .about-top .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -228,7 +284,9 @@ header .sp-header {
 }
 
 .about .about-text .about-top .name span {
-  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
 }
 
 .about .about-text .about-top .name .name-l {
@@ -250,7 +308,7 @@ header .sp-header {
 }
 
 .about .about-text .about-text-wrap {
-  margin-top: 30px;
+  margin: 30px 0 120px 0;
 }
 
 .about .about-text .about-text-wrap h4 {
@@ -281,8 +339,11 @@ header .sp-header {
 }
 
 .service .service-wrapper .service-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (max-width: 750px) {
@@ -296,7 +357,7 @@ header .sp-header {
   margin: 1%;
   padding: 35px;
   width: 31%;
-  background: darkslategray;
+  background: #828282;
   opacity: 0.8;
   border-radius: 15%;
 }
@@ -321,6 +382,73 @@ header .sp-header {
   font-size: 14px;
 }
 
+.skills {
+  position: relative;
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #ccc;
+  color: #333;
+}
+
+.skills h4 {
+  font-size: 1.5rem;
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 750px) {
+  .skills {
+    font-size: 1.2rem;
+  }
+}
+
+.skills .skills-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills .skills-wrap .skill-item {
+  width: calc(25% - 20px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.skills .skills-wrap .skill-item .skill-name {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 750px) {
+  .skills .skills-wrap .skill-item .skill-name {
+    font-size: 0.5rem;
+  }
+}
+
+.banner-title-skill {
+  padding: 20px 0;
+  color: #333;
+}
+
+.fa-2x::before {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 750px) {
+  .fa-2x::before {
+    font-size: 1em;
+  }
+}
+
 .contact .inner {
   text-align: center;
 }
@@ -342,8 +470,12 @@ footer {
 }
 
 footer .sns-container .sns-container-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .sns-container .sns-container-list .menu-item {
@@ -360,6 +492,8 @@ footer .copy-right {
 }
 
 .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 15px 25px;
   margin: 30px auto;
