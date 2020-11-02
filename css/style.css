@@ -2,6 +2,9 @@ body {
   background-color: #424242;
   color: #fff;
 }
+section {
+  margin-bottom: 50px;
+}
 
 section.top {
   padding-top: 0 !important;
@@ -15,7 +18,7 @@ a {
 .effect-fade {
   opacity: 0;
   -webkit-transform: translate(0, 45px);
-          transform: translate(0, 45px);
+  transform: translate(0, 45px);
   -webkit-transition: all 2000ms;
   transition: all 2000ms;
 }
@@ -23,12 +26,12 @@ a {
 .effect-fade.effect-scroll {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 h2 {
   position: relative;
-  color: #FFFFFF45;
+  color: #ffffff45;
   font-family: HeadLineA;
   letter-spacing: 11.25px;
   font-size: 65px;
@@ -137,11 +140,11 @@ h2.left span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 750px) {
@@ -168,8 +171,8 @@ header .pc-header nav.header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   font-size: 15px;
 }
 
@@ -203,7 +206,7 @@ header .sp-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 750px) {
@@ -234,10 +237,24 @@ header .sp-header {
     padding: 0;
   }
 }
+.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f137";
+  color: #fff; /* 色を白に */
+  margin-left: 20px; /* マージンを追加 */
+}
+.swiper-button-next:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f138";
+  color: #fff;
+  margin-right: 20px;
+}
 
 .work .work-wrapper .work-contents .work-content .work-content-text .work-name {
   font-size: 22px;
-  color: #DDB47C;
+  color: #ddb47c;
 }
 
 .work .work-wrapper .work-contents .work-content .work-content-text .work-dis {
@@ -246,8 +263,8 @@ header .sp-header {
 }
 
 .work .work-wrapper .work-contents .work-content .work-content-text .detail {
-  right: 0;
-  bottom: 0;
+  right: 20px;
+  bottom: 20px;
   position: absolute;
 }
 
@@ -285,8 +302,8 @@ header .sp-header {
 
 .about .about-text .about-top .name span {
   -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
 }
 
 .about .about-text .about-top .name .name-l {
@@ -343,7 +360,7 @@ header .sp-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 750px) {
@@ -407,19 +424,19 @@ header .sp-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .skills .skills-wrap .skill-item {
   width: calc(25% - 20px);
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -459,7 +476,7 @@ header .sp-header {
 
 footer {
   text-align: center;
-  background: #FFFFFF45;
+  background: #ffffff45;
   padding: 40px;
 }
 
@@ -474,8 +491,8 @@ footer .sns-container .sns-container-list {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 footer .sns-container .sns-container-list .menu-item {
@@ -497,13 +514,21 @@ footer .copy-right {
   width: fit-content;
   padding: 15px 25px;
   margin: 30px auto;
-  background: #A0A0A02C;
+  background: #a0a0a02c;
   font-family: Hiragino Mincho ProN;
   font-size: 15px;
 }
 
 .btn:hover {
   opacity: 0.6;
+}
+
+.sp-only {
+  display: none;
+}
+
+.pc-only {
+  display: block;
 }
 
 @media screen and (max-width: 750px) {
@@ -513,5 +538,11 @@ footer .copy-right {
   .sp-header {
     display: block;
   }
+  .sp-only {
+    display: block;
+  }
+
+  .pc-only {
+    display: none;
+  }
 }
-/*# sourceMappingURL=style.css.map */

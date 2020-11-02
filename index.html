@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Name Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css" integrity="sha512-uMIpMpgk4n6esmgdfJtATLLezuZNRb96YEgJXVeo4diHFOF/gqlgu4Y5fg+56qVYZfZYdiqnAQZlnu4j9501ZQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
@@ -13,6 +14,7 @@
       type="text/css"
       media="all"
     />
+    <!-- swiper読み込み -->
   </head>
   <body>
     <div id="load" class="load" style="display: none">
@@ -152,23 +154,57 @@
         </div>
       </div>
       <div class="inner">
-        <div class="work-wrapper">
-            <ul class="work-contents">
-              <li class="work-content">
-                <p class="img"><img src="./img/bootstrap.png" alt="" /></p>
+        <div class="work-wrapper swiper-container">
+            <ul class="work-contents swiper-wrapper">
+              <li class="work-content swiper-slide">
+                <a href="https://google.com" class="sp-only">
+                  <p class="img"><img src="./img/bootstrap.png" alt="" /></p>
+                </a>
+                <p class="img pc-only"><img src="./img/bootstrap.png" alt="" /></p>
                 <div class="work-content-text">
                   <p class="work-name">実践コーディング</p>
                   <p class="work-dis">Webサイト制作</p>
                   <p class="work-detail">
                     BootStrapでレスポンシブサイトをコーディングしました。
                   </p>
-                  <p class="detail"><a href="">詳しく見る</a></p>
+                  <p class="detail pc-only"><a href="">詳しく見る</a></p>
+                </div>
+              </li>
+              <li class="work-content swiper-slide">
+                <a href="https://google.com" class="sp-only">
+                  <p class="img"><img src="./img/bootstrap.png" alt="" /></p>
+                </a>
+                <p class="img pc-only"><img src="./img/bootstrap.png" alt="" /></p>
+
+                <div class="work-content-text">
+                  <p class="work-name">実践コーディング</p>
+                  <p class="work-dis">Webサイト制作</p>
+                  <p class="work-detail">
+                    BootStrapでレスポンシブサイトをコーディングしました。
+                  </p>
+                  <p class="detail pc-only"><a href="">詳しく見る</a></p>
+                </div>
+              </li>
+              <li class="work-content swiper-slide">
+                <a href="https://google.com" class="sp-only">
+                  <p class="img"><img src="./img/bootstrap.png" alt="" /></p>
+                </a>
+                <p class="img pc-only"><img src="./img/bootstrap.png" alt="" /></p>
+
+                <div class="work-content-text">
+                  <p class="work-name">実践コーディング</p>
+                  <p class="work-dis">Webサイト制作</p>
+                  <p class="work-detail">
+                    BootStrapでレスポンシブサイトをコーディングしました。
+                  </p>
+                  <p class="detail pc-only"><a href="">詳しく見る</a></p>
                 </div>
               </li>
             </ul>
-          <a class="btn-link" href="/about">
-            <div class="btn">全ての制作物</div>
-          </a>
+            <div class="swiper-pagination pc-only"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar pc-only"></div>
         </div>
       </div>
     </section>
@@ -446,8 +482,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="./app.js"></script>
     <script
-      type="text/javascript"
+      type="text/javascript"z
       src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js?ver=3.4.1"
     ></script>
+
+    <!-- swiper読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js" integrity="sha512-VHsNaV1C4XbgKSc2O0rZDmkUOhMKPg/rIi8abX9qTaVDzVJnrDGHFnLnCnuPmZ3cNi1nQJm+fzJtBbZU9yRCww==" crossorigin="anonymous"></script>
+    <!-- swiper初期化 -->
+    <script>
+      let mySwiper = new Swiper ('.swiper-container', {
+        // 以下にオプションを設定
+        loop: true, //最後に達したら先頭に戻る
+        //ページネーション表示の設定
+        pagination: {
+          el: '.swiper-pagination', //ページネーションの要素
+          type: 'bullets', //ページネーションの種類
+          clickable: true, //クリックに反応させる
+        },
+        //ナビゲーションボタン（矢印）表示の設定
+        navigation: {
+          nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+          prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
+        },
+        //スクロールバー表示の設定
+        scrollbar: {
+          el: '.swiper-scrollbar', //要素の指定
+        },
+      })
+      </script>
   </body>
 </html>
