@@ -2,9 +2,6 @@ body {
   background-color: #424242;
   color: #fff;
 }
-section {
-  margin-bottom: 50px;
-}
 
 section.top {
   padding-top: 0 !important;
@@ -92,6 +89,15 @@ h2.left span {
 .top-wrapper {
   height: 100vh;
   z-index: 1;
+}
+
+.top-wrapper .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 750px) {
@@ -363,6 +369,10 @@ header .sp-header {
   flex-wrap: wrap;
 }
 
+.service {
+  margin-top: 50px;
+}
+
 @media screen and (max-width: 750px) {
   .service .service-wrapper .service-items {
     display: block;
@@ -402,7 +412,7 @@ header .sp-header {
 .skills {
   position: relative;
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-align: center;
   background-color: #ccc;
   color: #333;
@@ -468,6 +478,9 @@ header .sp-header {
 
 .contact .inner {
   text-align: center;
+}
+.tel {
+  font-size: 2.5rem;
 }
 
 .contact .inner .contact-text p {
